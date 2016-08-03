@@ -17,9 +17,7 @@
 			sudo groupadd docker
 			read -p "Nombre del usuario que ejecutara Docker " nombre
 			sudo usermod -aG docker $nombre
-		break;;
-        [Nn]* ) break;;
-        * ) echo "Selecciona Y o N";;
+		break;; 
     esac
     read -p "Quieres Instalar LAMP (PHP-ZTS? >> (Y/N) " yn
     case $yn in
@@ -131,8 +129,6 @@
 			/usr/local/php/bin/pecl install pthreads-2.0.10
 			sed -i '/extension=modulename.extension/a extension=pthreads.so' /etc/php.ini
 		break;;
-        [Nn]* ) break;;
-        * ) echo "Selecciona Y o N";;
     esac
     read -p "Quieres Instalar PHPMYADMIN? >> (Y/N) " yn
     case $yn in
@@ -142,8 +138,6 @@
 			tar xvf phpMyAdmin-4.6.3-all-languages.tar.gz
 			mv phpMyAdmin-4.6.3-all-languages phpMyAdmin
 		break;;
-        [Nn]* ) break;;
-        * ) echo "Selecciona Y o N";;
     esac   
     read -p "Quieres Instalar Symfony? >> (Y/N) " yn
     case $yn in
@@ -158,8 +152,14 @@
 			cd "./$nombreSymfony"
 			php bin/console generate:bundle --bundle-name=BenchmarkBundle --format=yml
 		break;;
-        [Nn]* ) break;;
-        * ) echo "Selecciona Y o N";;
+    esac
+    read -p "Quieres Importar la BBDD? >> (Y/N) " yn
+    case $yn in
+        [Yy]* ) 
+			read -p "Nombre del usuario " MYSQL_user
+			read -p "Contrasena de $MYSQL_user " MYSQL_pass
+			mysql --user="$MYSQL_user" --password="$MYSQL_pass" < tfg.sql
+		break;;
     esac
     read -p "Quieres Descargar las imagenes Docker? >> (Y/N) " yn
     case $yn in
@@ -167,9 +167,6 @@
 			docker pull marioskill/apache-flink
 			docker pull marioskill/apache-storm
 			docker pull marioskill/apache-spark
-		break;;
-        [Nn]* ) break;;
-        * ) echo "Selecciona Y o N";;
     esac
 
 
