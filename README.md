@@ -7,7 +7,7 @@ Software que se instalará:
 * Stack Lamp (con soporte multi-Hilo)
 * phpMyAdmin
 * Symfony 3
-* Bundle [TFG] (https://github.com/MarioSkill/TFG) 
+* [Bundle TFG] (https://github.com/MarioSkill/TFG) 
 * Importamos BBDD
 
 #### Screenshot
