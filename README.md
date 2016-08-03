@@ -9,8 +9,7 @@ Instalacion del entorno para Benchmark
 * [Version 0.1](https://github.com/MarioSkill/TFG-install/archive/master.zip)
 
 ## Usage
-```$ git clone https://github.com/MarioSkill/TFG-install.git
-...```
+```$ git clone https://github.com/MarioSkill/TFG-install.git```
 
 ## Contacto
 * e-mail: mario.vasilecabezas@gmail.com
