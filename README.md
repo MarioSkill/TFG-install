@@ -1,6 +1,14 @@
 Instalacion del entorno para Benchmark 
 ======
 **Benchmark** para comprar Apache Spark vs Storm vs Flink. Instalamos todo el entorno sobre ubuntu.
+Software que se instalará:
+* Docker	
+* Stack Lamp (con soporte multi-Hilo)
+* phpMyAdmin
+* Symfony 3
+* Bundle [TFG] (https://github.com/MarioSkill/TFG) 
+* Importamos BBDD
+
 
 #### Screenshot
 ![Screenshot software](https://github.com/MarioSkill/TFG-install/blob/master/img.png "screenshot software")
